@@ -17,6 +17,7 @@ BuildRequires:	SDL-devel
 BuildRequires:	zlib-devel
 BuildRequires:	pkgconfig(freetype2)
 BuildRequires:	pkgconfig(openal)
+BuildRequires:	pkgconfig(xrender) >= 0.9.6
 
 
 %description
