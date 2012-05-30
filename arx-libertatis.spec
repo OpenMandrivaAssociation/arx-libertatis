@@ -7,6 +7,7 @@ License:	GPLv3+
 URL:		http://arx-libertatis.org/
 Source:		https://github.com/downloads/arx/ArxLibertatis/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
+BuildRequires:	cmake
 BuildRequires:	devil-devel
 BuildRequires:	glew-devel
 BuildRequires:	mesagl-devel
