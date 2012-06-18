@@ -1,5 +1,5 @@
 Name:		arx-libertatis
-Version:	1.0.1
+Version:	1.0.2
 Release:	%mkrel 1
 Summary:	An open source port of Arx Fatalis, a 2002 first-person role-playing game
 Group:		Games/Adventure
