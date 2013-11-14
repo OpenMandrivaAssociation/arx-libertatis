@@ -1,6 +1,6 @@
 Summary:	An open source port of Arx Fatalis, a 2002 first-person role-playing game
 Name:		arx-libertatis
-Version:	1.1.1
+Version:	1.1.2
 Release:	1
 License:	GPLv3+
 Group:		Games/Adventure
@@ -34,6 +34,17 @@ sources and available under the GPL 3+ license. This does however not include
 the game data, so you need to obtain a copy of the original Arx Fatalis or
 it's demo to play Arx Libertatis.
 
+%files
+%doc ARX_PUBLIC_LICENSE.txt AUTHORS CHANGELOG README.md
+%{_gamesbindir}/arx*
+%dir %attr(777,-,-) %{_gamesdatadir}/arx
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/pixmaps/%{name}.png
+%{_mandir}/man1/arx*.1*
+%{_mandir}/man6/arx*.6*
+
+#----------------------------------------------------------------------------
+
 %prep
 %setup -q
 %patch0 -p1
@@ -51,13 +62,4 @@ mv %{buildroot}%{_bindir} %{buildroot}%{_gamesbindir}
 mkdir -p %{buildroot}%{_gamesdatadir}/arx
 
 sed -i s\|RolePlaying\|AdventureGame\|g %{buildroot}%{_datadir}/applications/%{name}.desktop
-
-%files
-%doc ARX_PUBLIC_LICENSE.txt AUTHORS CHANGELOG README.md
-%{_gamesbindir}/arx*
-%dir %attr(777,-,-) %{_gamesdatadir}/arx
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/pixmaps/%{name}.png
-%{_mandir}/man1/arx*.1*
-%{_mandir}/man6/arx*.6*
 
