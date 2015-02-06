@@ -1,7 +1,7 @@
 Summary:	An open source port of Arx Fatalis, a 2002 first-person role-playing game
 Name:		arx-libertatis
 Version:	1.1.2
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Games/Adventure
 Url:		http://arx-libertatis.org/
