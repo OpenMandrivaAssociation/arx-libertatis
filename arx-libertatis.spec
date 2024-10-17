@@ -4,7 +4,7 @@ Version:	1.2.1
 Release:	1
 License:	GPLv3+
 Group:		Games/Adventure
-Url:		http://arx-libertatis.org/
+Url:		https://arx-libertatis.org/
 Source0:	https://github.com/arx/ArxLibertatis/releases/download/%{version}/arx-libertatis-%{version}.tar.xz
 Patch0:		arx-libertatis-link-curl.patch
 BuildRequires:	cmake
