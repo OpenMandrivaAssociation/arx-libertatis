@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	cmake(glm)
 
 %description
 Arx Libertatis is a cross-platform, open source port of Arx Fatalis,
