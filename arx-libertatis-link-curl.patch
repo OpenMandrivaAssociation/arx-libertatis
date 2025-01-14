@@ -1,6 +1,23 @@
 diff -up arx-libertatis-1.2.1/CMakeLists.txt.omv~ arx-libertatis-1.2.1/CMakeLists.txt
 --- arx-libertatis-1.2.1/CMakeLists.txt.omv~	2022-10-06 14:30:35.051522578 +0200
 +++ arx-libertatis-1.2.1/CMakeLists.txt	2022-10-06 14:31:00.569630514 +0200
+@@ -575,10 +575,12 @@ if(BUILD_CRASHREPORTER OR BUILD_PROFILER
+ 	
+ 	if(HAVE_QT AND BUILD_CRASHREPORTER)
+ 		if(NOT WIN32 OR NOT USE_WINHTTP)
+-			find_package(CURL 7.20.0 ${OPTIONAL_DEPENDENCY})
+-			if(CURL_FOUND AND NOT MSVC)
+-				check_link_library(CURL CURL_LIBRARIES)
+-			endif()
++			#			find_package(CURL 7.20.0 ${OPTIONAL_DEPENDENCY})
++			#			if(CURL_FOUND AND NOT MSVC)
++			#				check_link_library(CURL CURL_LIBRARIES)
++			#			endif()
++			set(CURL_FOUND TRUE)
++			set(CURL_LIBRARIES curl)
+ 		endif()
+ 		if((WIN32 AND USE_WINHTTP) OR CURL_FOUND)
+ 			if(NOT MSVC OR DBGHELP_FOUND)
 @@ -1651,6 +1651,7 @@ if(ARX_HAVE_CRASHREPORTER)
  		${QtGui_LIBRARIES}
  		${QtWidgets_LIBRARIES}
