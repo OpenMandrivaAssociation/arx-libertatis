@@ -11,6 +11,7 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	boost-devel
 BuildRequires:	devil-devel
+BuildRequires:	pkgconfig(epoxy)
 BuildRequires:	pkgconfig(freetype2)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glew)
